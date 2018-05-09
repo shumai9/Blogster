@@ -1,0 +1,29 @@
+<% @article_title = "Terminator" %>
+<%= link_to('<<', articles_path)%> <br /> 
+  <h2>Delete Article </h2>
+  <div class="alert">
+    <% if !flash[:alert].blank? %>
+    <%= flash[:alert] %>
+    <% end %>
+  </div>
+   
+<div class="delete article">
+ 
+  <%= form_for(@article, :method => 'delete')  do |f| %> 
+    <table summary="Article form fields">
+      <p>Warning! You are about to delete an article</p>
+      <p><%= f.object.title %></p>
+      <p> <%= f.object.body %></p>
+    </table>
+     
+     <div class=" delete-buttons">
+      <%= f.submit("delete Article") %>
+    </div>
+  <% end %>
+  <%= javascript_tag("alert('Are you SUREEEE???');") %>
+  
+</div>
+<!-- :url => article_path(@article), is optional, but :method =>delete 'post' should be specified) 
+
+
+-->

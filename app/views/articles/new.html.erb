@@ -1,0 +1,14 @@
+ <h1><% from_post= 'Now You are @ Articles creation page' %></h1>
+<%="#{from_post}"%>
+
+<%= link_to('home', {:controller => 'articles', :action => 'index'}) %> <br />
+<div class="articles new">
+<h2>Create Article </h2>
+
+<%= form_for(@article) do |f| %> <!--  :url => articles_path, :method => 'post') -->
+  <%= render(:partial => 'form', :locals => {:f => f})%> 
+    <div class=" form-buttons">
+    <%= f.submit("Create Article")%>
+  </div>
+<% end %>
+</div>

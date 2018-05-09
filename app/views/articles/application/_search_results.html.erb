@@ -1,0 +1,12 @@
+  <div class="result">
+  <% @result.each do |f| %>
+  <ul>
+    <li><strong>Name:<%= f.title %></strong></li>
+    <!-- <li>Position: <%= f.position %></li> -->
+    <li>Content:</li><i><%= f.body %></i>
+    <li>Available:<%= f.visible %></li>
+    <li>Last update: <%= f.updated_at %> </li>
+  </ul>
+  <% end %>
+  </div>
+

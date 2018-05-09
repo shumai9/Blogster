@@ -1,0 +1,40 @@
+<% @article_title = "Whole Article" %>
+    
+<%= link_to('home', {:controller => 'articles', :action => 'index'}) %> <br />
+
+<h2>The Show time</h2>
+<p>Well I seem to understand how for every file I created I will have to write a route for it in the config file so that it can be found.</p>
+<%= link_to('Roar', '#', :onclick => "jsRoar('javaScript');") %>
+<div class="tap">
+  <%= form_for(@article) do |f| %> <!--  :url => articles_path, :method => 'post') -->
+   <table summary="Subject detail view">
+    <tr>
+      <th>Name</th>
+      <td><%= f.text_field(:title) %></td>
+    </tr>
+    <tr>
+      <th>Position</th>
+      <td><%= f.text_field(:position) %></td>
+    </tr>
+    <tr>
+      <th>Content</th>
+      <td><%= f.text_area(:body) %></td>
+    </tr>
+    <tr>
+      <th>Available</th>
+        <td><%= status_tag(f.text_field(:visible))%></td>
+    </tr>
+    <tr>
+      <th>Updated at</th>
+      <td><%= f.text_field(:updated_at) %></td>
+    </tr>
+    <tr>
+      <th>Created at</th>
+      <td><%= f.text_field(:created_at)%></td>
+    </tr>
+   </table>
+   <% end %>
+</div>
+
+
+<%= link_to(' << Back', articles_path) %> <br />

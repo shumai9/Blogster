@@ -1,0 +1,25 @@
+
+<%= error_messages_for(f.object) %>
+<table summary="Article form fields">
+  <tr>
+    <th>Title</th>
+    <td><%= f.text_field(:title)%></td>
+  </tr>
+  <tr>
+    <th>Author</th>
+    <td><%= f.text_field(:author)%></td>
+  </tr>
+  <tr>
+    <th>Position</th>
+    <td><%= f.select(:position, 1..@article_count)%></td>
+  </tr>
+
+  <tr>
+  <th>Content</th>
+  <td><%= f.text_area(:body)%></td>
+  </tr>
+  <tr>
+  <th>visibile</th>
+  <td><%= f.check_box(:visible)%></td>
+  </tr>
+</table>

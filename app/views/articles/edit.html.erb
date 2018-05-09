@@ -1,0 +1,14 @@
+<%= link_to('<<', articles_path)%> <br /> 
+  <h2>Edit Article </h2>
+  <div class="edit article">
+  <%= form_for(@article) do |f| %> <!--  :url => articles_path, :method => 'post') -->
+  <%= render(:partial => 'form', :locals => {:f => f})%> 
+  <tr>
+    <th>Created at</th>
+    <td><%= f.datetime_select(:created_at, :order => [:day, :month, :year])%></td>
+  </tr>
+     <div class=" form-buttons">
+      <%= f.submit("Update Article") %>
+    </div>
+   <% end %>
+</div>
