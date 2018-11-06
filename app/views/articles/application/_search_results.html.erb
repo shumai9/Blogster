@@ -1,11 +1,12 @@
   <div class="result">
+    <em>Search Results:</em>
   <% @result.each do |f| %>
   <ul>
     <li><strong>Name:<%= f.title %></strong></li>
     <!-- <li>Position: <%= f.position %></li> -->
-    <li>Content:</li><i><%= f.body %></i>
+    <li>Content:</li><p><%= f.body %></p>
     <li>Available:<%= f.visible %></li>
-    <li>Last update: <%= f.updated_at %> </li>
+    <li>Last update: <%= f.updated_at %> </li><hr>
   </ul>
   <% end %>
   </div>

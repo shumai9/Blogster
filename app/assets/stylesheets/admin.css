@@ -24,4 +24,6 @@ ul {
   text-align: left;
   background-color: rgba(120, 120 ,145, 0.3);
   border-radius: 15px;
+  padding-top: 20px;
+  margin-bottom: 50px;
 }

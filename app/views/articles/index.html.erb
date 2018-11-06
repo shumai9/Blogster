@@ -1,3 +1,4 @@
+<h2>Articles</h2>
 <% @article_title = "All Articles" %>
 <span id="look">
   <%= form_tag(articles_path, :method => :get) do %>
@@ -5,11 +6,7 @@
       <%= submit_tag 'Search by Title', name: nil %>
       <% end %>
   </span>
-    
-<h2>Home is Where my Blog post lives</h2>
-<p>This is Article land</p>
 
-<%= render(:partial => 'articles/application/search_results') if @result %>
 
 
 <%= image_tag('plus_sign.png', :size => '15x15', :alt => '+')%>
@@ -42,6 +39,7 @@
   <% end %>
 </table>
 </div>
+<%= render(:partial => 'articles/application/search_results') if @result %>
 
 
 <!--
